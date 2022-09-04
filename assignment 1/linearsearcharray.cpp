@@ -4,7 +4,7 @@ int target(int arr[],int size, int target){
     int N=0;
     for(int i=0; i<size; i++){
         if(arr[i]==target)
-            return ;
+            return 0;
         
     }
     return -1; 
