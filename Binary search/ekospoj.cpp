@@ -41,7 +41,8 @@ int getMaxHeightofSaw(int arr[], int n, int target ){
 
 int main(){
     int arr[]={15,8,18,6};
-    // int n=sizeof(arr)/sizeof(arr[0]);
+    int n=sizeof(arr)/sizeof(arr[0]);
+    cout<<n;
     int target=30;
     int ans=getMaxHeightofSaw(arr,4,target);
     cout<<"answer is "<<ans<<endl;

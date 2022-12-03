@@ -2,12 +2,13 @@
 #include<algorithm>
 using namespace std;
 
-int pairsum(int arr[],int n,int target){
-    int i=0;
+void pairsum(int arr[],int n,int target){
+    for(int i=0; i<n; i++){
+    int first=i;
     int j=n-1;
-    int newtarget=target-arr[i];
+    int newtarget=target-arr[first];
     while(i<j){
-       if(arr[i]+arr[j]>newtarget){
+        if(arr[i]+arr[j]>newtarget){
         j--;
         }
         else if(arr[i]+arr[j]<newtarget){
@@ -15,18 +16,18 @@ int pairsum(int arr[],int n,int target){
         }
         else{
             cout<<"the pair of "<<arr[i]<<" and "<<arr[j]<<" is equal to "<<newtarget<<endl;
-            return true;
+            return;
         }
     }
-            cout<<"the pair of "<<arr[i]<<" and "<<arr[j]<<" is not equal to "<<newtarget<<endl;
-            return false;
+        cout<<arr[i]<<"not equal to"<<arr[j]<<newtarget;
+    }
 
 }
 
 int main(){
     int arr[]={3,1,4,5,9,13,11};
     int n=sizeof(arr)/sizeof(arr[0]);
-    // sort(arr,arr+n);
+    sort(arr,arr+n);
     for(int i=0; i<n; i++){
         cout<<arr[i]<<" ";
     }
